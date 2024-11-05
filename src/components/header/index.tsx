@@ -19,6 +19,10 @@ const Header = () => {
     navigate('/Search');
   };
 
+  const handleAddNavigation = () => {
+    navigate('/add');
+  };
+
   return (
     <HeaderContainer>
       <Section>
@@ -35,7 +39,7 @@ const Header = () => {
       <Section>
         <ButtonContainer>
           <img src={search} alt="search" onClick={handleSearchNavigation} />
-          <img src={upload} alt="upload" />
+          <img src={upload} alt="upload" onClick={handleAddNavigation} />
           <img src={aimage} alt="ai" />
         </ButtonContainer>
       </Section>
