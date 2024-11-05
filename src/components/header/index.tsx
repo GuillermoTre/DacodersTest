@@ -23,6 +23,10 @@ const Header = () => {
     navigate('/add');
   };
 
+  const handleAskAiNavigation = () => {
+    navigate('/askAi');
+  };
+
   return (
     <HeaderContainer>
       <Section>
@@ -40,7 +44,7 @@ const Header = () => {
         <ButtonContainer>
           <img src={search} alt="search" onClick={handleSearchNavigation} />
           <img src={upload} alt="upload" onClick={handleAddNavigation} />
-          <img src={aimage} alt="ai" />
+          <img src={aimage} alt="ai" onClick={handleAskAiNavigation} />
         </ButtonContainer>
       </Section>
     </HeaderContainer>

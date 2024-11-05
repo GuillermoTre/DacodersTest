@@ -9,6 +9,10 @@ module.exports = {
       version: 'detect',
     },
   },
+  env: {
+    node: true,
+    browser: true,
+  },
   extends: [
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
@@ -31,4 +35,4 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
-}
+};
