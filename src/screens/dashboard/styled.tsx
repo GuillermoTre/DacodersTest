@@ -5,26 +5,26 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 90px;
+  padding-left: 300px;
 `;
 
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 200px;
 `;
 
 export const HeaderText = styled.label`
   color: purple;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 36px;
 `;
 
 export const SubText = styled.label`
   color: black;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 `;
 

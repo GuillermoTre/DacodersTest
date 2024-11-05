@@ -10,8 +10,15 @@ import {
 import search from '../../assets/images/search.png';
 import upload from '../../assets/images/upload.png';
 import aimage from '../../assets/images/aimage.png';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleSearchNavigation = () => {
+    navigate('/Search');
+  };
+
   return (
     <HeaderContainer>
       <Section>
@@ -27,7 +34,7 @@ const Header = () => {
       </Section>
       <Section>
         <ButtonContainer>
-          <img src={search} alt="search" />
+          <img src={search} alt="search" onClick={handleSearchNavigation} />
           <img src={upload} alt="upload" />
           <img src={aimage} alt="ai" />
         </ButtonContainer>
