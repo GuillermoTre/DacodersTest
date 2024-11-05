@@ -1,4 +1,4 @@
-Boilerplate used: git clone https://github.com/divshekhar/react-typescript-template.git
+Boilerplate used:  https://github.com/divshekhar/react-typescript-template.git
 
 Instructions:
 
