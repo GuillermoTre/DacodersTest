@@ -25,8 +25,10 @@ import like from '../../assets/images/like.png';
 import dislike from '../../assets/images/dislike.png';
 import burger from '../../assets/images/burger.png';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AskAi = () => {
+  const navigate = useNavigate();
   const [question, setQuestion] = useState<string>('');
   const [response, setResponse] = useState<string>('');
 
@@ -50,11 +52,15 @@ const AskAi = () => {
     }
   };
 
+  const handleReturn = () => {
+    navigate('/Dashboard');
+  };
+
   return (
     <Container>
       <ContentContainer>
         <HeaderContainer>
-          <Section>
+          <Section onClick={handleReturn}>
             <ImageContainer src={arrow} />
             <SubText>Return</SubText>
           </Section>
