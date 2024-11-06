@@ -32,22 +32,21 @@ const AskAi = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent) => {
     if (event.key === 'Enter') {
-      // const key = 'AIzaSyCffXHc6eYl0mouGCq5gZ4AlKY0ueVcPbY';
-      // const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${key}`;
-      // const body = { contents: [{ parts: [{ text: question }] }] };
-      // try {
-      //   const resp = await axios(apiUrl, {
-      //     method: 'POST',
-      //     data: body,
-      //   });
-      //   const result = resp.data;
-      //   const text = result.candidates[0].content.parts[0].text;
-      //   console.log(text);
-      //   setResponse(text);
-      // } catch (error) {
-      //   console.log(error);
-      // }
-      console.log(question);
+      const key = 'AIzaSyCffXHc6eYl0mouGCq5gZ4AlKY0ueVcPbY';
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${key}`;
+      const body = { contents: [{ parts: [{ text: question }] }] };
+      try {
+        const resp = await axios(apiUrl, {
+          method: 'POST',
+          data: body,
+        });
+        const result = resp.data;
+        const text = result.candidates[0].content.parts[0].text;
+        console.log(text);
+        setResponse(text);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
